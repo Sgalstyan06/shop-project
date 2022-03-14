@@ -1,6 +1,7 @@
 import CardItem from "./CardItem";
 import { getData } from "../service/api";
 import { useEffect, useState } from "react";
+import "./CardCss.css";
 
 function Cards() {
   const [response, setResponse] = useState([]);
@@ -9,7 +10,7 @@ function Cards() {
   }, []);
 
   return (
-    <div>
+    <div className="total">
       {response.map((item) => {
         return (
           <CardItem
