@@ -1,5 +1,6 @@
 
 import Cards from "../card/Cards";
+import "./Home.css";
 
 function Home(){
     return(

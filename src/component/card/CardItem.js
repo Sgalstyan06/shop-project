@@ -1,10 +1,11 @@
 import React from "react";
 import { Card, Icon, Image } from "semantic-ui-react";
+import './CardItemCss.css';
 
 function CardItem({ name, price, image, description }) {
   return (
     <div>
-      <Card>
+      <Card >
         <Image src={image} wrapped ui={false} />
         <Card.Content>
           <Card.Header>{name}</Card.Header>

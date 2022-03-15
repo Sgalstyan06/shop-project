@@ -6,6 +6,7 @@ import Header from "./component/header/Header";
 import Home from "./component/home/Home";
 
 import Footer from "./component/footer/Footer";
+import Slides from "./component/slide/Slider";
 
 function App() {
   
@@ -13,8 +14,10 @@ function App() {
     <div className="App">
       <div>       
         <Header/>
+        <Slides/>
         <Home/>
         <Footer/>
+        
       </div>
     </div>
   );
