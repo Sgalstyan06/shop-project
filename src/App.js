@@ -1,25 +1,24 @@
-import logo from "./logo.svg";
 import "./App.css";
-import { Menu, Segment } from "semantic-ui-react";
-import Header from "./component/header/Header";
+import Header from "./components/header/Header";
+import Footer from "./components/footer/Footer";
+import Home from "./components/home/Home";
+import Products from "./components/products/Products";
+import { Route, BrowserRouter, Routes } from "react-router-dom";
+import LoginPage from "./components/login/LoginPage";
 
-import Home from "./component/home/Home";
-
-import Footer from "./component/footer/Footer";
-import Slides from "./component/slide/Slider";
-
-function App() {
-  
+function App(slides) {
   return (
-    <div className="App">
-      <div>       
-        <Header/>
-        <Slides/>
-        <Home/>
-        <Footer/>
-        
+    <BrowserRouter>
+      <div className="App">
+        <Header />
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/products" element={ <Products/> } />
+          <Route path="/login" element={ <LoginPage />} />
+        </Routes>
+        <Footer />
       </div>
-    </div>
+    </BrowserRouter>
   );
 }
 
